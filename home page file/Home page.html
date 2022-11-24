@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="icon.png"/>
+  <meta charset="UTF-8">
+  <title>Animals world</title>
+  <header>
+    <h1 class="he">ANIMAL WORLD<img style="width: 40px; height: 40px;" src="icon.png"></h1>
+  </header>
+    
+   <style>
+     body{
+  background-image: url("IMG-20210601-WA0036.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+table{
+  border: 1px solid;
+  height: 500px;
+  width: 1000px;
+  margin-left: 130px;
+  box-shadow: 5px 5px 20px #787a4f;
+}
+.image{
+  overflow: hidden;
+  height: 400px; 
+  width: 600px;
+  margin: 20px;
+
+}  
+
+.image img {
+    transition: 0.2s;
+    filter: blur(0);
+}
+.image:hover img{
+  transform: scale(1.3);
+  opacity: 0.7;
+  filter: blur(2px);
+}
+.text{
+  font-size: 20px;
+  float:right;
+  margin-top: -50px;
+  color: #11130c;
+  max-width: 90%;
+  margin-right: 10px;
+
+}
+.DoYou{
+  font-size: 30px;
+  color: #787a4f;
+  text-transform: uppercase;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+}
+.button1{
+  font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1.429;
+  background-color: #a5b662;
+  border: none;
+  box-sizing: content-box;
+  margin-top: 25px;
+  margin-right: 83px;
+  margin-left: 75px;
+  padding: 5px;
+  width: 20%;
+  height: 35px;
+  cursor: pointer;
+}
+button{
+  font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1.429;
+  background-color: #a5b662;
+  border: none;
+  box-sizing: content-box;
+  margin-top: -10px;
+  margin-right: 83px;
+  margin-left: 900px;
+  margin-bottom: 10px;
+  padding: 0px;
+  width: 20%;
+  height: 60px;
+  cursor: pointer;
+}
+/* .alret{
+  font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1.429;
+  background-color: #a5b662;
+  border: none;
+  box-sizing: content-box;
+  margin-top: -10px;
+  margin-right: 83px;
+  margin-left: 900px;
+  padding: 0px;
+  width: 20%;
+  height: 60px;
+  cursor: pointer;
+} */
+h1.v {
+  font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    letter-spacing: 3.5px;
+    line-height: 1.19;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 100px;
+    font-weight: bold;
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+body header{
+  background-color: #7e904e;
+  color:#000;
+  padding:10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align:start;
+  z-index: 999999999;
+  background-image: linear-gradient(#eee4dd,#7e904e);
+  position:fixed;
+  width: 100%;
+  height:70px;
+  margin-top: 0;
+}
+body nav{
+  position: fixed;
+  margin-top: 70px;
+  width: 100%;
+  height:10px;
+  z-index: 99999999;
+}
+body nav ul{
+  list-style-type: none;
+  margin:0;
+  float: right;
+  height: 20px;
+  width: 100%;
+  padding:0;
+  overflow: hidden;
+  background-image: linear-gradient(#1f261f,#7e904e);
+}
+body nav ul li{
+  float: left;
+  display: table-cell;
+  vertical-align:middle;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+body nav ul li a{
+  height: 100%;
+  display:table;
+  float: left;
+  color:#a0a5a9;
+  text-align: center;
+  padding: 0px 20px;
+  text-decoration: #eee;
+}
+body nav ul li a:hover{
+  background-color: #eee;
+  transform: scale(1.5);
+}
+#myVideo {
+    width: 100%;
+  
+}
+
+.filterbar_container{
+  width: 100%;
+  height: 35px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  padding: 0;
+}
+.filterbar_items{
+    font-family:sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 3;
+    padding: 8px 10px;
+    margin: 0 25px;
+    color: #000;
+    border-bottom: 5px solid rgb(16, 70, 23);
+    font-size: 20px;
+}
+div h2{
+  color: #2c3318;
+  font-size: 80px;
+}
+.InlineEmail_background{
+    background-position-x: 50%;
+    background-position-y: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 250px 20px;
+    position: relative;
+    width: auto;
+    z-index: -1;
+}
+.Text-for-InlineEmail{
+    font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    color: #eee;
+    text-shadow: 2px 2px black;
+    font-size: 45px;
+    letter-spacing: 3px;
+    line-height: 1.25;
+    margin: -270px 45px;
+    text-transform: uppercase;
+}
+.button2{
+    font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 1.429;
+    background-color: #787a4f;
+    border: none;
+    /* -webkit-box-sizing: content-box;
+    box-sizing: content-box; */
+    margin-top: 290px;
+    margin-right: 0;
+    margin-left: 400px;
+    padding: 13px;
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+} 
+button:hover{
+  transform: scale(1.2);
+}
+body footer{
+  background-color:#a5b662 ;
+  color:#312f29;
+  padding: 3px;
+  margin-top: 112px;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  background-image: linear-gradient(#7e904e 70%,#1f261f);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+button{
+font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1.429;
+  background-color: #a5b662;
+  border: none;
+  box-sizing: content-box;
+  margin-top: -10px;
+  margin-right: 83px;
+  margin-left: 900px;
+  margin-bottom: 10px;
+  padding: 0px;
+  width: 20%;
+  height: 60px;
+  cursor: pointer;
+}
+   </style>
+</head>
+<nav>
+  <ul>
+      <li><a target="_blank" href="../../habi/mammals/mammals-1.html" title="visit Mammals page">Mammals</a></li>
+      <li><a target="_blank" href="../fish page file/Fish.html" title="visit Fish page">Fish</a></li>
+      <li><a target="_blank" href="../../sha/birds/page11.htm" title="visit Birds page">Birds</a></li>
+      <li><a target="_blank" href="../../sha/amphibians/pag12.htm" title="visit Amphibians page">Amphibians</a></li>
+      <li><a target="_blank" href="../../page 2/invertebrates.html" title="visit Invertebrates page">Invertebrates</a></li>
+      <li><a target="_blank" href="../../ima/IT.Project_1/pro.html" title="visit Insects page">Insects</a></li>
+      <li><a target="_blank" href="../../ima/IT.Project_1/reptile.html" title="visit Reptiles page">Reptiles</a></li>
+  </ul>
+</nav>
+<body>
+    <video autoplay muted loop id="myVideo">
+      <source src="KOALA.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+    <div role="tablist" class="filterbar_container">
+         <div class="filterbar_items">
+           <a class="AnchorLink_filterbar" tabindex="0" aria-selected="true"
+            aria-label="ALL" role="tab" target="self"> Animals</a>
+         </div>
+         <div class="filterbar_items">
+          <a class="AnchorLink_filterbar" tabindex="0" aria-selected="true"
+           aria-label="ALL" role="tab" target="_blank" href="../../page 1/animalrev.html"> Reserves</a>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div>
+      <h2>Animals Types:</h2>
+      <br>
+      <br>
+    </div>
+    <button type="button"
+       onclick="document.getElementById('demo').innerHTML = Date()">
+       Click here to display Date and Time.</button>
+
+      <p id="demo" style="
+        font-size: 15px;
+        margin-left:auto;
+        margin-top: 5px;
+        margin-left: 510px;
+        "></p>
+        <button  onclick="myFunction()">Tab here!</button>
+      <script>
+      function myFunction() {
+        alert("WELCOME TO ANIMAL WORLD WEBSITE!");
+      }
+      </script>  
+  <table>
+    <div class="card">
+      <tr>
+        <th>
+          <div class="image">
+            <img src="mammals.jpg"  height="400" width="600"/>
+          </div>
+        </th>
+        <th>
+          <div class="text">
+            <p> Mammals (from Latin mamma, 'breast') are a group of 
+              vertebrate animals constituting the class Mammalia (/məˈmeɪliə/), 
+              and characterized by the presence of mammary glands which in 
+              females produce milk for feeding (nursing) their young...
+              <br>
+              <br>
+          </div>
+          <div class="DoYou">
+            <p> <br>do you want to know more about mammals? </p>
+          </div>
+          <div>
+            <button class="button1" tabindex="0">
+                <span><a target="_blank" href="../../habi/mammals/mammals-1.html">Read more!</a></span>
+              </span>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </div>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table >
+    <tr>
+      <th>
+        <div class="image">
+          <img src="amphibans.jpg"  height="400" width="600"/>
+        </div>
+      </th>
+      <th>
+        <div class="text">
+          Amphibians are ectothermic, 
+          tetrapod vertebrates of the class 
+          Amphibia. All living amphibians belong 
+          to the group Lissamphibia. They 
+          inhabit a wide variety of habitats,
+          with most species living within terrestrial, 
+          fossorial, arboreal or freshwater aquatic ecosystems...
+          <br>
+          <br>
+        </div>
+        
+        <div class="DoYou">
+          <p> <br> do you want to know more about amphibans?</p>
+        </div>
+        <div>
+          <button class="button1" tabindex="0">
+              <span><a target="_blank" href="../../sha/amphibians/pag12.htm">Read more!</a></span>
+            </span>
+          </button>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table >
+    <tr>
+      <th>
+        <div class="image">
+          <img src="fish2.jpg"  height="400" width="600"/>
+        </div>
+      </th>
+      <th>
+        <div class="text">
+          Fish are aquatic, craniate, gill-bearing animals that lack 
+          limbs with digits. They form a sister group to the tunicates, 
+          together forming the olfactores. Included in this definition 
+          are the living hagfish, lampreys, and cartilaginous
+          and bony fish as well as various extinct related groups...
+          <br>
+          <br>
+        </div>
+        
+        <div class="DoYou">
+          <p> <br>do you want to know more about fish?</p>
+        </div>
+        <div>
+          <button class="button1" tabindex="0">
+              <span><a target="_blank" href="../fish page file/Fish.html">Read more!</a></span>
+            </span>
+          </button>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table>
+    <div class="card">
+      <tr>
+        <th>
+          <div class="image">
+            <img src="crocodile.jpg"  height="400" width="600"/>
+          </div>
+        </th>
+        <th>
+          <div class="text">
+             
+            <p> Reptiles, as most commonly defined, a paraphyletic grouping
+              comprising all amniotes except synapsids 
+              (mammals and their extinct relatives) and Aves (birds)
+              The class comprises turtles, crocodilians, snakes, 
+              amphisbaenians, lizards, tuatara, and their extinct 
+              relatives...
+              <br>
+              <br>
+          </div>
+          <div class="DoYou">
+            <p> <br>do you want to know more about Reptiles? </p>
+          </div>
+          <div>
+            <button class="button1" tabindex="0">
+                <span><a target="_blank" href="../../ima/IT.Project_1/reptile.html">Read more!</a></span>
+              </span>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </div>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>
+        <div class="image">
+          <img src="birds.jpg"  height="400" width="600"/>
+        </div>
+      </th>
+      <th>
+        <div class="text">
+          Birds are a group of warm-blooded vertebrates constituting the 
+          class Aves /ˈeɪviːz/, characterised by feathers, toothless beaked 
+          jaws, the laying of hard-shelled eggs, a high metabolic rate, a 
+          four-chambered heart, and a strong yet lightweight skeleton...
+        <br>
+        <br>
+        </div>
+        <div class="DoYou">
+          <p> <br>do you want to know more about birds?</p>
+        </div>
+        <div>
+          <button class="button1" tabindex="0">
+              <span><a target="_blank" href="../../sha/birds/page11.htm">Read more!</a></span>
+            </span>
+          </button>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>
+        <div class="image">
+          <img src="ladybug.jpg"  height="400" width="600"/>
+        </div>
+      </th>
+      <th>
+        <div class="text">
+          Insects or Insecta (from Latin insectum) are pancrustacean 
+          hexapod invertebrates and the largest group within the arthropod 
+          phylum. Definitions and circumscriptions vary; usually, insects 
+          comprise a class within the Arthropoda...
+        <br>
+        <br>
+        </div>
+        <div class="DoYou">
+          <p> <br>do you want to know more about insects?</p>
+        </div>
+        <div>
+          <button class="button1" tabindex="0">
+              <span><a target="_blank" href="../../ima/IT.Project_1/pro.html">Read more!</a>></span>
+            </span>
+          </button>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table>
+    <div class="card">
+      <tr>
+        <th>
+          <div class="image">
+            <img src="octopus.jpeg"  height="400" width="600"/>
+          </div>
+        </th>
+        <th>
+          <div class="text">
+            <p> Invertebrates are animals that neither possess nor develop a vertebral column (commonly known as a backbone or spine), derived from the notochord. This includes all animals apart from the subphylum Vertebrata.....
+              <br>
+              <br>
+          </div>
+          <div class="DoYou">
+            <p> <br>do you want to know more about invertebrates? </p>
+          </div>
+          <div>
+            <button class="button1" tabindex="0">
+                <span><a target="_blank" href="../../page 2/invertebrates.html">Read more!</a></span>
+              </span>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </div>
+
+  </table>
+  <br>
+  <br>
+  <br>
+  <div class="InlineEmail_container">
+    <div class="InlineEmail_background" style="background-image:url(reptiles.jpg)"></div>
+        <div class="Text-for-InlineEmail">sign up for more amazing facts about animals!</div> 
+  </div>
+  <div>
+    <button class="button2" tabindex="0">
+        <span><a target="_blank" href="../../habi/page one log in/log in page-1.html">sign up!</a></span>
+      </span>
+    </button>
+  </div> 
+<footer>
+    <p>All rights reserved 2021 </p>
+    <p class="ff">إيمان عبد العال* حبيبة أمين* سلمى الدسوقي* شهيرة نصر الدين* هُنيدة الزواوي</p>
+    <p class="ff">فرقة أولى كلية حاسبات و ذكاء اصطناعي</p>
+    <p>Sources: NAT GEO,WIKIPIDEA</p>
+</footer>
+</body>
+</html>
